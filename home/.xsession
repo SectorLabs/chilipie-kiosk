@@ -28,10 +28,13 @@ fi
 # Remove notes of previous sessions, if any
 find .config/chromium/ -name "Last *" -exec rm {} +
 
+# Remove tabs of current sessions, if any
+find .config/chromium/ -name "Current Session" -exec rm {} +
+
 # Start and detach Chromium
 # http://peter.sh/experiments/chromium-command-line-switches/
 # Note that under matchbox, starting in full-screen without a window size doesn't behave well when you try to exit full screen (see https://unix.stackexchange.com/q/273989)
-chromium-browser --start-fullscreen --window-size=1920,1080 --disable-infobars &
+chromium-browser --start-fullscreen --window-size=1920,1080 --disable-infobars http://bayut-smashing.herokuapp.com/bayut http://bayut-smashing.herokuapp.com/github http://bayut-smashing.herokuapp.com/elastic &
 
 # Hide Chromium while it's starting/loading the page
 wid=`xdotool search --sync --onlyvisible --class chromium`
