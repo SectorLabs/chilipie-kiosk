@@ -1,4 +1,0 @@
-http://bayut-smashing.herokuapp.com/bayut
-http://bayut-smashing.herokuapp.com/github
-http://bayut-smashing.herokuapp.com/elastic
-&
