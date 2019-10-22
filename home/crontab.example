@@ -11,17 +11,17 @@ DISPLAY=:0.0
 # * * * * *  command to execute
 
 # Reboot the Pi every night at 3 AM to ensure smooth operation
-0 3 * * * sudo reboot
+0 3 * * * pi sudo reboot
 
 # Example: Turn display on weekdays at 7 AM
-# 0 7 * * 1-5 ~/display-on.sh
+0 7 * * 1-5 pi /home/pi/display-on.sh
 
 # Example: Turn display off weekdays at 7 PM (and after the nightly reboot)
-# 0 19 * * 1-5 ~/display-off.sh
-# 10 3 * * 1-5 ~/display-off.sh
+0 19 * * 1-5 pi /home/pi/display-off.sh
+10 3 * * 1-5 pi /home/pi/display-off.sh
 
 # Example: Reload webpage every hour
 # 0 * * * * xdotool key ctrl+R
 
 # Example: Cycle between open tabs every 5 minutes
-# */5 * * * * xdotool key ctrl+Tab
+*/5 * * * * pi xdotool key ctrl+Tab
